@@ -1,0 +1,133 @@
+package the_startting;
+import java.util.*;
+
+public class TheStarting {
+	public int Accepting_2_numbers(int a,int b)
+	{
+		int sum=a+b;
+		return sum;
+	}
+
+	public int PrintingTheQuotient(int a,int b)
+	{
+		int quo=a/b;
+		return quo;
+	}
+
+	public int SquareNumber(int a)
+	{
+		int square=a*a;
+		return square;
+	}
+
+	public int Accepting5NumbersAndDoing(int arr[],int n)
+	{
+		int sum=0;
+		for(int i=0;i<n;i++)
+		{
+			sum=sum+arr[i];
+		}
+		return sum;
+	}
+
+	public char AcceptingCharacter(char ch)
+	{
+		return ch;
+	}
+
+
+	public char ASCIIChanger(char ch)
+	{
+		int cha=ch+32;
+		return (char)cha;
+	}
+
+	public int Whole_number(float ch )
+	{
+		return (int)ch;
+	}
+
+	public void Decimal_part(float ch)
+	{
+		System.out.println(ch-(int)ch);
+	}
+
+	public int Next_number(int a)
+	{
+		int b=++a;
+		return b;
+	}
+
+	public char NextCharacter(char ch)
+	{
+	    int er=ch+1;
+	    return (char)er;
+	}
+
+	public float Detucting_salary(float salary)
+	{
+		float tds=salary-(salary*10/100);
+		return tds;
+	}
+
+	public int PreviousNumber(int num)
+	{
+		int nu=(--num);
+		return nu;
+	}
+
+	public int Cube_of_number(int a)
+	{
+		return (a*a*a);
+	}
+public static void main(String[] args) {
+	Scanner scanner=new Scanner(System.in);
+	TheStarting o=new TheStarting();
+	int a,b;
+	a=scanner.nextInt();
+	b=scanner.nextInt();
+	
+	
+	int sum=o.Accepting_2_numbers(a,b);
+	System.out.println("The sum of 2 numebrs are = "+sum);
+	
+	System.out.println("The quotient of 2 numebrs are = "+o.PrintingTheQuotient(a,b));
+	
+	System.out.println("The square of a number is "+o.SquareNumber(a));
+	
+	System.out.println("Enter the numebr of elements you wanted in your array");
+	int n=scanner.nextInt();
+	int arr[]=new int[n];
+	System.out.println("enter the numbers");
+	for(int i=0;i<n;i++)
+	{
+		arr[i]=scanner.nextInt();
+	}
+	System.out.println("The sum of all the elements are "+o.Accepting5NumbersAndDoing(arr, n));
+	
+	System.out.println("Accepting a character");
+	char ch=scanner.next().charAt(0);
+	System.out.println("The character you have entered is "+o.AcceptingCharacter(ch));
+	
+	
+	System.out.println("The changed ASCII is "+o.ASCIIChanger(ch));
+	
+	float f=scanner.nextFloat();
+	System.out.println("The whole number you have entered is "+o.Whole_number(f));
+	
+	o.Decimal_part(f);
+	
+	System.out.println("The next numebr is "+o.Next_number(a));
+	
+	System.out.println("The next character is "+o.NextCharacter(ch));
+	
+	float salary;
+	salary=scanner.nextFloat();
+	System.out.println("Your salary after TDS deduction is "+o.Detucting_salary(salary));
+	
+	System.out.println("The previous number is "+o.PreviousNumber(a));
+	
+	System.out.println("cube of number is "+o.Cube_of_number(a));
+	
+}
+}

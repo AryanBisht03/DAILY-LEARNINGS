@@ -1,0 +1,48 @@
+package arraylist;
+import java.util.List;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
+//Write a Java program to add five integers to an ArrayList and print the list.
+//Remove an element from a given ArrayList and display the updated list.
+//Find the largest number in an ArrayList of integers.
+//Search for a specific element in an ArrayList and print its index.
+//Sort an ArrayList in ascending order using Collections.sort().
+
+public class ArrayListJAVA {
+public static void main(String[] args) {
+List<Integer> li=new ArrayList<>();
+Scanner scanner=new Scanner(System.in);
+
+System.out.println("Enter the number of elements you wanted to put into the array list");
+int n=scanner.nextInt();
+System.out.println("Enter the elements");
+for(int i=0;i<n;i++)
+{
+	int element=scanner.nextInt();
+	li.add(element);
+}
+System.out.println(li);
+
+System.out.println("enter the element from the list which you want to remove");
+int removing_element=scanner.nextInt();
+li.remove(removing_element);
+
+System.out.println("the maimum number from the list is "+Collections.max(li));
+System.out.println(li);
+
+//searching
+System.out.println("Enter the number you wanted to search");
+int ele=scanner.nextInt();
+if(li.contains(ele))
+{
+	System.out.println(li.indexOf(ele));
+}
+else
+	System.out.println("element not founded");
+
+Collections.sort(li);
+System.out.println(li);
+}
+
+}

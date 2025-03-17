@@ -1,0 +1,51 @@
+package arraylist;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.LinkedList;
+import java.util.ArrayList;
+
+//Create a LinkedList of strings and add five names. Print the list.
+//Insert an element at the beginning and end of a LinkedList.
+//Remove the first and last element from a LinkedList.
+//Convert a LinkedList into an ArrayList.
+//Iterate through a LinkedList using a for-each loop
+public class Linkedlist {
+public static void main(String[] args) {
+	//adding names
+	List<String> names=new LinkedList<>();
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("Enter the number of names you wanted to enter");
+	int n=scanner.nextInt();
+	scanner.nextLine();
+	for(int i=0;i<n;i++)
+	{
+		String name=scanner.nextLine();
+		names.add(name);
+	}
+	System.out.println(names);
+	
+	//inserting at the beginning
+	System.out.println("Enter the element you wanted to insert at the beginning");
+	String ele=scanner.nextLine();
+	names.addFirst(ele);
+	System.out.println("New list is "+ names);
+	
+	
+	//removing the first and last element from the LL
+	names.removeFirst();
+	names.removeLast();
+	System.out.println(names);
+	
+	// converting a LL into an arrayList
+	List<String> namess=new ArrayList<>(names);
+	System.out.println(namess);
+	
+	
+	//iterating a LL using for each loop
+	for(String we:names)
+	{
+		System.out.println(we);
+	}
+}
+}

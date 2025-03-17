@@ -1,0 +1,55 @@
+package arraylist;
+import java.util.Vector;
+import java.util.List;
+import java.util.Scanner;
+
+//Create a Vector of 5 city names and display them.
+//Add an element at a specific index in a Vector.
+//Remove an element from a Vector using remove(int index).
+//Use the firstElement() and lastElement() methods of Vector.
+//Check if a given element exists in a Vector using contains().
+public class Vectorsss {
+public static void main(String[] args) {
+	List<String> vec=new Vector<>();
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("Enter the number of city names you want");
+	int n=scanner.nextInt();
+	scanner.nextLine();
+	for(int i=0;i<n;i++)
+	{
+		String ele=scanner.nextLine();
+		vec.add(ele);
+	}
+	System.out.println(vec);
+	
+	//adding an element at a specific index
+	System.out.println("Enter the index in which you want to insert the element");
+	int index=scanner.nextInt();
+    scanner.nextLine();
+	System.out.println("Enter the name of the city");
+	String s=scanner.nextLine();
+	vec.add(index, s);
+	System.out.println(vec);
+	
+	//removing an element
+	System.out.println("Enter the element index you want to remove");
+	int no=scanner.nextInt();
+	vec.remove(no);
+	
+	// printing the first and last element of the vector
+	System.out.println(vec.getFirst());
+	System.out.println(vec.getLast());
+	
+	// checking the given element exists or not
+	String element=scanner.nextLine();
+	if(vec.contains(element))
+	{
+		System.out.println("founded");
+	}
+	else
+	{
+		System.out.println("Not founded");
+	}
+	
+}
+}
